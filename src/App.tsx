@@ -7,21 +7,25 @@ import PageNotFound from './Screens/PageNotFound';
 import HistoryPage from './Screens/HistoryPage';
 import LaunchesPage from './Screens/LaunchesPage';
 import RocketsPage from './Screens/RocketsPage';
+import { Provider } from 'react-redux';
+import { store } from './Store';
 
 function App() {
   return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <Routes>
-        <Route path="*" element={<PageNotFound />} />
-        <Route element={<NavBar />} >
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/history" element={<HistoryPage />} />
-          <Route path="/launches" element={<LaunchesPage />} />
-          <Route path="/rockets" element={<RocketsPage />} />
-        </Route >
-      </Routes>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <ScrollToTop />
+        <Routes>
+          <Route path="*" element={<PageNotFound />} />
+          <Route element={<NavBar />} >
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/history" element={<HistoryPage />} />
+            <Route path="/launches" element={<LaunchesPage />} />
+            <Route path="/rockets" element={<RocketsPage />} />
+          </Route >
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   );
 }
 

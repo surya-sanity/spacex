@@ -11,9 +11,9 @@ const NavBarContent = () => {
 
   const [navbarOpen, setNavbarOpen] = React.useState(false);
 
-  //close navbar if navigation in done on responsive layout and if its open
+  //close navbar if navigation in done on responsive layout
   useEffect(() => {
-    if (pathname && navbarOpen) {
+    if (pathname) {
       setNavbarOpen(false);
     }
   }, [pathname])

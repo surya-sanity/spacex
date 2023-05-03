@@ -17,6 +17,7 @@ const Logo = (props: LogoProps) => {
   return (
     <img
       onClick={handleLogoClick}
+      loading="lazy"
       src={SpaceXLogo}
       alt="SpaceX"
       className={`${className} ${onClick ? "cursor-pointer" : ""}`}
