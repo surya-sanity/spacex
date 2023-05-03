@@ -1,13 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import NavBar from './Components/NavBar/NavBar';
+import ScrollToTop from './Components/ScrollToTop';
+import LandingPage from './Screens/LandingPage';
+import PageNotFound from './Screens/PageNotFound';
+import HistoryPage from './Screens/HistoryPage';
+import LaunchesPage from './Screens/LaunchesPage';
+import RocketsPage from './Screens/RocketsPage';
 
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  )
+    <BrowserRouter>
+      <ScrollToTop />
+      <Routes>
+        <Route path="*" element={<PageNotFound />} />
+        <Route element={<NavBar />} >
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/history" element={<HistoryPage />} />
+          <Route path="/launches" element={<LaunchesPage />} />
+          <Route path="/rockets" element={<RocketsPage />} />
+        </Route >
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
