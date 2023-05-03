@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { ReactComponent as MenuIcon } from '../../Assets/Icons/menu.svg';
+import { ReactComponent as CloseIcon } from '../../Assets/Icons/close.svg';
 import Logo from "../Logo";
 import NavBarMenu from "./NavBarMenuItems";
 
@@ -33,7 +34,7 @@ const NavBarContent = () => {
             className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none ml-auto"
             type="button"
             onClick={handleMenuIconClick}>
-            <MenuIcon />
+            {!navbarOpen ? <MenuIcon /> : <CloseIcon />}
           </button>
         </div>
         <NavBarMenu navbarOpen={navbarOpen} />
