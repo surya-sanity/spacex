@@ -5,14 +5,13 @@ interface NavBarMenuItemPropType {
   menuItem: MenuItemType
 }
 
-
 const NavBarMenuItem = (props: NavBarMenuItemPropType) => {
   const { menuItem } = props;
   const { pathname } = useLocation()
 
   const menuItemStyle = {
     navLink: "text-gray-400",
-    active: "underline underline-offset-[0.5rem] text-white font-semibold",
+    active: "underline underline-offset-[0.5rem] text-black font-semibold dark:text-white",
   }
 
   const isActive = pathname === menuItem.route
@@ -24,7 +23,7 @@ const NavBarMenuItem = (props: NavBarMenuItemPropType) => {
       {menuItem.name}
 
       {/* show the hover underline animation only if the item is not active */}
-      {!isActive && <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-[1px] bg-white mt-[0.2rem] m-auto"></span>}
+      {!isActive && <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-[1px]  bg-black dark:bg-white mt-[0.2rem] m-auto"></span>}
     </NavLink>
   )
 }

@@ -4,6 +4,7 @@ import { ReactComponent as MenuIcon } from '../../Assets/Icons/menu.svg';
 import { ReactComponent as CloseIcon } from '../../Assets/Icons/close.svg';
 import Logo from "../Logo";
 import NavBarMenu from "./NavBarMenuItems";
+import DarkModeSwitch from "./DarkModeSwitch";
 
 const NavBarContent = () => {
   const navigate = useNavigate();
@@ -25,19 +26,26 @@ const NavBarContent = () => {
 
   return (
     <div className="sticky top-0">
-      <div className="flex flex-wrap items-center justify-between px-5 md:px-20 lg:px-[10%] py-7 relative bg-black">
+      <div className="flex flex-wrap items-center justify-between px-5 md:px-20 lg:px-[10%] py-5 relative bg-light dark:bg-dark">
         <div className="w-full flex justify-between lg:w-full lg:static lg:block lg:justify-start items-center">
           <NavLink to={"/"} className={"absolute"}>
-            <Logo onClick={handleLogoClick} className="h-5 hover:scale-105 transition-all" />
+            <Logo onClick={handleLogoClick} className="h-7 hover:scale-105 transition-all" />
           </NavLink>
-          <button
-            className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none ml-auto"
-            type="button"
-            onClick={handleMenuIconClick}>
-            {!navbarOpen ? <MenuIcon /> : <CloseIcon />}
-          </button>
+
+          <div className="ml-auto flex flex-row items-center gap-x-3 lg:hidden justify-center">
+            <DarkModeSwitch />
+            <button
+              className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent lg:hidden outline-none focus:outline-none flex items-center justify-center"
+              type="button"
+              onClick={handleMenuIconClick}>
+              {!navbarOpen ? <MenuIcon /> : <CloseIcon />}
+            </button>
+          </div>
         </div>
         <NavBarMenu navbarOpen={navbarOpen} />
+        <div className="hidden lg:block ">
+          <DarkModeSwitch />
+        </div>
       </div>
     </div>
   );

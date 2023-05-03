@@ -1,5 +1,5 @@
 import { memo } from "react";
-import SpaceXLogo from "../Assets/Images/logo.png";
+import { ReactComponent as SpaceXLogo } from '../Assets/Images/SpaceX.svg';
 
 interface LogoProps {
   className?: string;
@@ -15,14 +15,11 @@ const Logo = (props: LogoProps) => {
   };
 
   return (
-    <img
+    <SpaceXLogo
       onClick={handleLogoClick}
-      loading="lazy"
-      src={SpaceXLogo}
-      alt="SpaceX"
       className={`${className} ${onClick ? "cursor-pointer" : ""}`}
     />
-  );
+  )
 };
 
 export default memo(Logo);
