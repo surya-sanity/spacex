@@ -1,7 +1,8 @@
-import { useState } from 'react'
-import useDarkMode from '../../Hooks/useDarkMode'
+import { useSelector } from 'react-redux';
 import { ReactComponent as Dark } from '../../Assets/Icons/moon.svg';
 import { ReactComponent as Light } from '../../Assets/Icons/sun.svg';
+import useDarkMode from '../../Hooks/useDarkMode';
+import { getDarkMode } from '../../Store/Reducers/UtilReducer';
 
 interface DarkModeSwitchPropType {
   className?: string;
@@ -11,11 +12,10 @@ const DarkModeSwitch = (props: DarkModeSwitchPropType) => {
   const { className } = props;
 
   const { colorTheme, setTheme } = useDarkMode()
-  const [darkMode, setDarkMode] = useState(colorTheme === 'light')
+  const darkMode = useSelector(getDarkMode)
 
   const toggleDarkMode = () => {
     setTheme(colorTheme);
-    setDarkMode(!darkMode)
   }
 
   return (

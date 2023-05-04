@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react"
+import { useDispatch } from "react-redux"
+import { setDarkMode } from "../Store/Reducers/UtilReducer"
 
 const useDarkMode = () => {
+  const dispatch = useDispatch()
   const [theme, setTheme] = useState(localStorage.theme ?? "dark")
+
   const colorTheme = theme === 'dark' ? 'light' : 'dark'
 
   useEffect(() => {
@@ -9,9 +13,14 @@ const useDarkMode = () => {
     root.classList.remove(colorTheme);
     root.classList.add(theme);
 
+    const _darkMode = theme === 'dark'
+
+    //set the global state of darkMode 
+    dispatch(setDarkMode(_darkMode))
+
     localStorage.setItem('theme', theme);
 
-  }, [theme, colorTheme])
+  }, [theme, colorTheme, dispatch])
 
   return { colorTheme, setTheme }
 
