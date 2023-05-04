@@ -13,8 +13,8 @@ export const useLandingPageHook = () => {
 
   useEffect(() => {
     if (allLaunches && launchesSuccess) {
-      //couldn't find the exact result for landing page so mimicking the launches data with results which has images and limiting to 4 items.
-      const dataWithImages = allLaunches.filter((val) => val.links.flickr.original.length > 0).map((val) => val).slice(0, 4)
+      //couldn't find the exact result for landing page of (www.spacex.com) so mimicking the launches data with results which has images and limiting to 7 items.
+      const dataWithImages = allLaunches.filter((val) => val.links.flickr.original.length > 0).map((val) => val).slice(12, 19)
       setLaunchesData(dataWithImages);
     }
   }, [allLaunches, launchesSuccess])
