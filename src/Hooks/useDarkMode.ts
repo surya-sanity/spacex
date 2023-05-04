@@ -15,6 +15,7 @@ const useDarkMode = () => {
 
     const _darkMode = theme === 'dark'
 
+    document.body.style.background = _darkMode ? 'black' : "white"
     //set the global state of darkMode 
     dispatch(setDarkMode(_darkMode))
 

@@ -25,11 +25,11 @@ const NavBarContent = () => {
   const handleMenuIconClick = () => { setNavbarOpen(!navbarOpen) }
 
   return (
-    <div className="sticky top-0">
+    <div className="sticky top-0 z-50">
       <div className="flex flex-wrap items-center justify-between px-5 md:px-20 lg:px-[10%] py-5 relative bg-light dark:bg-dark">
         <div className="w-full flex justify-between lg:w-full lg:static lg:block lg:justify-start items-center">
           <NavLink to={"/"} className={"absolute"}>
-            <Logo onClick={handleLogoClick} className="h-7 hover:scale-105 transition-all" />
+            <Logo onClick={handleLogoClick} className="h-7 hover:scale-105 transition-all mx-0" />
           </NavLink>
 
           <div className="ml-auto flex flex-row items-center gap-x-3 lg:hidden justify-center">
