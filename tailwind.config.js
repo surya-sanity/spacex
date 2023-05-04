@@ -10,6 +10,7 @@ module.exports = {
         'dark': 'black',
         'light': 'white',
         'darkOverlay': '#1E1E1E',
+        'space-brown': '#E6D9A2'
       },
       keyframes: {
         bumpOutAndSlideInUp: {

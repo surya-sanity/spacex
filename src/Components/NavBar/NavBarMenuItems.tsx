@@ -16,11 +16,6 @@ interface NavBarMenuPropsType {
 //provided the menubar items as an array.
 const menuItemsInitialData: MenuItemType[] = [
   {
-    name: "History",
-    route: "/history",
-    component: HistoryPage,
-  },
-  {
     name: "Launches",
     route: "/launches",
     component: LaunchesPage,
@@ -29,6 +24,11 @@ const menuItemsInitialData: MenuItemType[] = [
     name: "Rockets",
     route: "/rockets",
     component: RocketsPage,
+  },
+  {
+    name: "History",
+    route: "/history",
+    component: HistoryPage,
   },
 ];
 
