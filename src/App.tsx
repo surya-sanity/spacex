@@ -2,7 +2,7 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NavBar from './Components/NavBar/NavBar';
 import ScrollToTop from './Components/ScrollToTop';
-import LandingPage from './Screens/LandingPage';
+import LandingPage from './Screens/LandingPage/LandingPage';
 import PageNotFound from './Screens/PageNotFound';
 import HistoryPage from './Screens/HistoryPage';
 import LaunchesPage from './Screens/LaunchesPage';

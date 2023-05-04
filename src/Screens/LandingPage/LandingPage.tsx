@@ -1,8 +1,8 @@
-import { ReactComponent as LandingCut } from '../Assets/Images/landing-cut.svg';
-import { ReactComponent as SpaceBG } from '../Assets/Images/space-tr-bg.svg';
-import Astronaut from '../Assets/Images/astronaut2.png';
-import Moon from '../Assets/Images/moon-landing.png';
-import Image from '../Components/Image';
+import { ReactComponent as LandingCut } from '../../Assets/Images/landing-cut.svg';
+import { ReactComponent as SpaceBG } from '../../Assets/Images/space-tr-bg.svg';
+import Astronaut from '../../Assets/Images/astronaut2.png';
+import Moon from '../../Assets/Images/moon-landing.png';
+import Image from '../../Components/Image';
 
 function LandingPage() {
 

@@ -3,7 +3,6 @@ import { ReactComponent as Dark } from '../../Assets/Icons/moon.svg';
 import { ReactComponent as Light } from '../../Assets/Icons/sun.svg';
 import useDarkMode from '../../Hooks/useDarkMode';
 import { getDarkMode } from '../../Store/Reducers/UtilReducer';
-import { MouseEventHandler } from 'react';
 
 interface DarkModeSwitchPropType {
   className?: string;
