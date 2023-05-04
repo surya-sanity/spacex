@@ -1,5 +1,5 @@
-import Image from "../../Components/Image"
-import { Launch } from "../../Models/Launch"
+import { Launch } from "../../Models/Launch";
+import LandingLaunchesCard from "./LandingLaunchesCard";
 
 interface LandingLaunchesPropType {
   launches: Launch[]
@@ -11,13 +11,7 @@ const LandingLaunches = (props: LandingLaunchesPropType) => {
 
   return (
     <div ref={scrollRef}>
-      {launches.map((launch, index) => {
-        return (
-          <div key={index.toString()} className='h-[100vh] w-full flex flex-1 items-center justify-start lg:justify-center  relative overflow-x-hidden overflow-clip'>
-            <Image src={launch.links.flickr.original[0]} className='object-cover h-full w-full' />
-          </div>
-        )
-      })}
+      {launches.map((launch, index) => <LandingLaunchesCard launch={launch} key={index.toString()} />)}
     </div>
   )
 }
