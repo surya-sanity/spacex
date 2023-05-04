@@ -27,7 +27,7 @@ const InitialLandingDash = (props: InitialLandingDashPropType) => {
       <LandingCut className='absolute -bottom-[10vh] right-0 -z-0 opacity-30 animate-bump-out-in-right select-none' height={imageByHeight(1)} />
       <Image src={Moon} alt="Moon" className='animate-bump-out-in-left absolute top-0 lg:top-[5vh] -left-[15vw] select-none z-20' loading='eager' height={imageByWidth(0.35)} width={imageByWidth(0.35)} />
       <Image src={Astronaut} alt="Astronaut" className='absolute -bottom-[5rem] right-0 animate-bump-out-in-right select-none z-20' loading='eager' width={imageByWidth(isMedium ? 2 : 0.4)} />
-      <div className="px-[10%] z-40 flex flex-col gap-y-5 items-center justify-start animate-bump-out-in-up">
+      <div className="px-[10%] z-40 flex flex-col gap-y-5 items-start md:items-center justify-start animate-bump-out-in-up">
         <span className="text-5xl md:text-7xl font-light md:leading-[6rem] md:text-center select-none">The future
           <br />
           <span >is <span className="font-semibold">here</span></span>
