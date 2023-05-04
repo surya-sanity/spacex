@@ -1,3 +1,4 @@
+import { memo } from "react"
 
 const Image = (props: React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>) => {
 
@@ -6,4 +7,4 @@ const Image = (props: React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageE
   )
 }
 
-export default Image
+export default memo(Image)
