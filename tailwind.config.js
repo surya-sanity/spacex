@@ -8,7 +8,8 @@ module.exports = {
     extend: {
       colors: {
         'dark': 'black',
-        'light': 'white'
+        'light': 'white',
+        'darkOverlay': '#1E1E1E',
       },
       keyframes: {
         bumpOutAndSlideInUp: {
@@ -29,12 +30,17 @@ module.exports = {
           '40%': { scale: '1.5' },
           '100%': { scale: '1', transform: 'translateX(0rem)' },
         },
+        tilt: {
+          '0%': { transform: 'rotate(20deg)' },
+          '100%': { transform: 'rotate(0deg)' },
+        },
       },
       animation: {
         "bump-out-in-up": 'bumpOutAndSlideInUp 1s linear normal',
         "bump-out-in-right": 'bumpOutAndSlideInRight 700ms linear normal',
         "bump-out-in-left": 'bumpOutAndSlideInLeft 700ms linear normal',
         "fade-in": 'fadeIn 700ms linear normal',
+        "tilt": 'tilt 700ms linear normal',
       },
     },
   },

@@ -4,7 +4,7 @@ import NavBar from './Components/NavBar/NavBar';
 import ScrollToTop from './Components/ScrollToTop';
 import LandingPage from './Screens/LandingPage/LandingPage';
 import PageNotFound from './Screens/PageNotFound';
-import HistoryPage from './Screens/HistoryPage';
+import HistoryPage from './Screens/HistoryPage/HistoryPage';
 import LaunchesPage from './Screens/LaunchesPage';
 import RocketsPage from './Screens/RocketsPage';
 import { Provider } from 'react-redux';
