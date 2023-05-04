@@ -4,11 +4,13 @@ import { rocketsApi } from "../Services/rocketsApi";
 import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";
 import { combineReducers } from "redux";
+import UtilReducer from "./Reducers/UtilReducer";
 
 const reducers = combineReducers({
   [historyApi.reducerPath]: historyApi.reducer,
   [launchesApi.reducerPath]: launchesApi.reducer,
   [rocketsApi.reducerPath]: rocketsApi.reducer,
+  util: UtilReducer
 });
 
 const store = configureStore({
@@ -25,5 +27,5 @@ const store = configureStore({
 });
 
 setupListeners(store.dispatch);
-
+export type RootState = ReturnType<typeof reducers>;
 export { store };

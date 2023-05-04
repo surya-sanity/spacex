@@ -11,11 +11,15 @@ export const launchesApi = createApi({
       query: () => "launches",
       providesTags: ["Launch"],
     }),
-    getLaunchById: builder.query<Launch, any>({
-      query: (id: string) => `launches/${id}`,
+    getLaunchById: builder.query<Launch, string>({
+      query: (id) => `launches/${id}`,
       providesTags: ["Launch"],
-    })
+    }),
+    getLatestLaunches: builder.query<Launch[], void>({
+      query: () => `launches/latest`,
+      providesTags: ["Launch"],
+    }),
   }),
 })
 
-export const { useGetLaunchesQuery, useGetLaunchByIdQuery } = launchesApi;
+export const { useGetLaunchesQuery, useGetLaunchByIdQuery, useGetLatestLaunchesQuery } = launchesApi;

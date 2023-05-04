@@ -8,7 +8,7 @@ import HistoryPage from './Screens/HistoryPage';
 import LaunchesPage from './Screens/LaunchesPage';
 import RocketsPage from './Screens/RocketsPage';
 import { Provider } from 'react-redux';
-import { store } from './Store';
+import { store } from './Store/store';
 
 function App() {
   return (
