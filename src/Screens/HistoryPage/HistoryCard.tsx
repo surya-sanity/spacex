@@ -25,7 +25,7 @@ const HistoryCard = (props: HistoryCardPropType) => {
         <div className="flex flex-col gap-y-3 pr-3 py-3">
           <div className="flex flex-col gap-y-3 ">
             <div className="text-lg font-semibold">{history.title}</div>
-            <div className="text-sm line-clamp-3">{history.details}</div>
+            <div className="text-sm line-clamp-3 text-justify">{history.details}</div>
             <div className="text-sm flex flex-row gap-x-3">
               <span>
                 <Calendar className="h-5 w-5" />
