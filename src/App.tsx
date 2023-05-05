@@ -5,7 +5,7 @@ import ScrollToTop from './Components/ScrollToTop';
 import LandingPage from './Screens/LandingPage/LandingPage';
 import PageNotFound from './Screens/PageNotFound';
 import HistoryPage from './Screens/HistoryPage/HistoryPage';
-import LaunchesPage from './Screens/LaunchesPage';
+import LaunchesPage from './Screens/LaunchesPage/LaunchesPage';
 import RocketsPage from './Screens/RocketsPage';
 import { Provider } from 'react-redux';
 import { store } from './Store/store';

@@ -1,5 +1,5 @@
 import HistoryPage from "../../Screens/HistoryPage/HistoryPage";
-import LaunchesPage from "../../Screens/LaunchesPage";
+import LaunchesPage from "../../Screens/LaunchesPage/LaunchesPage";
 import RocketsPage from "../../Screens/RocketsPage";
 import NavBarMenuItem from "./NavBarMenuItem";
 

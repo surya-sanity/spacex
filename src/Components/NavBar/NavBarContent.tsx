@@ -26,7 +26,7 @@ const NavBarContent = () => {
 
   return (
     <div className="sticky top-0 z-50">
-      <div className="flex flex-wrap items-center justify-between px-5 lg:px-[10%] py-5 relative bg-light dark:bg-dark">
+      <div className="flex flex-wrap items-center justify-between px-5 lg:px-[5%] py-5 relative bg-light dark:bg-dark">
         <div className="w-full flex justify-between lg:w-full lg:static lg:block lg:justify-start items-center">
           <NavLink to={"/"} className={"absolute"}>
             <Logo onClick={handleLogoClick} className="h-7 hover:scale-105 transition-all mx-0" />
