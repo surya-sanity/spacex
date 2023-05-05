@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import Button from "../../Components/Button";
 import Image from "../../Components/Image";
 import { Rocket } from "../../Models/Rocket";
@@ -19,10 +20,12 @@ const RocketCard = (props: RocketCardPropType) => {
       </div>
       <div className="text-sm">{new Date(rocket.first_flight).toLocaleDateString()}</div>
       <div className="text-4xl font-bold uppercase">{rocket.name}</div>
-      <Button
-        onClick={() => { }}>
-        Learn more
-      </Button>
+      <NavLink to={`/rockets/${rocket.id}`}>
+        <Button
+          onClick={() => { }}>
+          Learn more
+        </Button>
+      </NavLink>
     </div>
   )
 }

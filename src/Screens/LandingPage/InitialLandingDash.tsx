@@ -1,7 +1,7 @@
 import { ReactComponent as LandingCut } from '../../Assets/Images/landing-cut.svg';
 import { ReactComponent as SpaceBG } from '../../Assets/Images/space-tr-bg.svg';
-import Astronaut from '../../Assets/Images/astronaut2.png';
-import Moon from '../../Assets/Images/moon-landing.png';
+import Astronaut from '../../Assets/Images/astronaut2.webp';
+import Moon from '../../Assets/Images/moon-landing.webp';
 import Image from '../../Components/Image';
 import useWindowDimensions from '../../Hooks/useWindowDimensions';
 
@@ -12,11 +12,10 @@ interface InitialLandingDashPropType {
 const InitialLandingDash = (props: InitialLandingDashPropType) => {
   const { triggerScroll } = props
 
-  const { windowDimensions: { height: screenHeight, width: screenWidth } } = useWindowDimensions()
+  const { windowDimensions: { width: screenWidth } } = useWindowDimensions()
 
   //calculating the image height for precise positioning, due to scaling in small screen laptops
   const imageSizeInPx = (size: number) => `${(size)}px`
-  const imageByHeight = (percent: number) => imageSizeInPx((screenHeight) * percent)
   const imageByWidth = (percent: number) => imageSizeInPx((screenWidth) * percent)
 
   const handleViewClick = () => triggerScroll()
