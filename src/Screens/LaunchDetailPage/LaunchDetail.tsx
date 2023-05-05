@@ -22,7 +22,7 @@ const LaunchDetail = () => {
   }
 
   return (
-    <div className='self-center w-full lg:px-[5%] px-10'>
+    <div className='self-center w-full px-5 lg:px-[5%] '>
       <div className="w-full md:pl-5 flex flex-col gap-y-10 py-5 pb-20">
         <YoutubePlayer videoId={launchData.links.youtube_id} className="w-full md:h-[50vh] self-center rounded-xl select-none border-none" />
         <div className="flex flex-col gap-y-4">
