@@ -33,6 +33,6 @@ code {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: white;
+  background-color: rgb(134, 134, 134);
   border-radius: 50px;
 }
