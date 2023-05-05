@@ -4,12 +4,13 @@ import { History } from "../Models/History"
 
 /**
  * To fetch the data for History page and also search by title functions
- * @returns histories, historiesLoading, historiesSuccess, historiesError and searchByTitle
+ * @returns histories, historiesLoading, historiesSuccess, historiesError, searchByTitle and searchQuery
  */
 
 export const useHistoryHook = () => {
   const { data: allHistories, isLoading: historiesLoading, isSuccess: historiesSuccess, isError: historiesError } = useGetHistoriesQuery()
   const [histories, setHistories] = useState<History[]>(allHistories ?? [])
+  const [searchQuery, setSearchQuery] = useState<string>("")
 
   useEffect(() => {
     if (allHistories && historiesSuccess) {
@@ -19,6 +20,7 @@ export const useHistoryHook = () => {
 
   const searchByTitle = (query: string) => {
     if (allHistories) {
+      setSearchQuery(query)
 
       if (query === '') {
         setHistories(allHistories)
@@ -31,5 +33,5 @@ export const useHistoryHook = () => {
 
   }
 
-  return { histories, historiesLoading, historiesSuccess, historiesError, searchByTitle }
+  return { histories, historiesLoading, historiesSuccess, historiesError, searchByTitle, searchQuery }
 }

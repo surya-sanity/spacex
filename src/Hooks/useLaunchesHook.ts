@@ -1,7 +1,7 @@
 
 /**
  * To fetch the data for launches page 
- * @returns launchesData, launchesLoading and launchesError
+ * @returns launchesData, launchesLoading, launchesError, searchByLaunchName and searchQuery
  */
 
 import { useEffect, useState } from "react"
@@ -11,6 +11,7 @@ import { Launch } from "../Models/Launch"
 export const useLaunchesHook = () => {
   const { data: allLaunches, isLoading: launchesLoading, isSuccess: launchesSuccess, isError: launchesError } = useGetLaunchesQuery()
   const [launchesData, setLaunchesData] = useState<Launch[]>([])
+  const [searchQuery, setSearchQuery] = useState<string>("")
 
   useEffect(() => {
     if (allLaunches && launchesSuccess) {
@@ -20,6 +21,7 @@ export const useLaunchesHook = () => {
 
   const searchByLaunchName = (query: string) => {
     if (allLaunches) {
+      setSearchQuery(query)
 
       if (query === '') {
         setLaunchesData(allLaunches)
@@ -31,5 +33,5 @@ export const useLaunchesHook = () => {
     }
   }
 
-  return { launchesData, launchesLoading, launchesError, searchByLaunchName }
+  return { launchesData, launchesLoading, launchesError, searchByLaunchName, searchQuery }
 }

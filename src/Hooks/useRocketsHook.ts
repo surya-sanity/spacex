@@ -4,12 +4,13 @@ import { Rocket } from "../Models/Rocket"
 
 /**
  * To fetch the data for rockets page 
- * @returns rocketsData, rocketsLoading and rocketsError
+ * @returns rocketsData, rocketsLoading, rocketsError, searchByRocketName and searchQuery
  */
 
 export const useRocketsHook = () => {
   const { data: allRockets, isLoading: rocketsLoading, isSuccess: rocketsSuccess, isError: rocketsError } = useGetRocketsQuery()
   const [rocketsData, setRocketsData] = useState<Rocket[]>([])
+  const [searchQuery, setSearchQuery] = useState<string>("")
 
   useEffect(() => {
     if (allRockets && rocketsSuccess) {
@@ -19,6 +20,7 @@ export const useRocketsHook = () => {
 
   const searchByRocketName = (query: string) => {
     if (allRockets) {
+      setSearchQuery(query)
 
       if (query === '') {
         setRocketsData(allRockets)
@@ -30,5 +32,5 @@ export const useRocketsHook = () => {
     }
   }
 
-  return { rocketsData, rocketsLoading, rocketsError, searchByRocketName }
+  return { rocketsData, rocketsLoading, rocketsError, searchByRocketName, searchQuery }
 }
