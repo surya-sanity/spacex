@@ -19,7 +19,6 @@ function LandingPage() {
     return <Loading />
   }
 
-  //todo handle empty state
   return (
     <section className='w-full'>
       <InitialLandingDash triggerScroll={triggerScroll} />

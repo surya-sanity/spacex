@@ -10,7 +10,7 @@ interface HistoryContentPropType {
 const HistoryContent = (props: HistoryContentPropType) => {
   const { histories, searchQuery } = props;
 
-  if (!histories.length) {
+  if (!histories.length && searchQuery) {
     return (<EmptyState isFullPage={true} className="h-[50vh]" forQuery={searchQuery} />)
   }
 

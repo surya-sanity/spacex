@@ -11,7 +11,7 @@ const LandingLaunchesCard = (props: LandingLaunchesCardPropType) => {
   const { launch } = props;
 
   return (
-    <div className='h-[100vh] w-full flex flex-1 items-start justify-start delay-0 relative overflow-x-hidden overflow-clip transition-all group leading-none'>
+    <div className='h-[92vh] md:h-[100vh] w-full flex flex-1 items-start justify-start delay-0 relative overflow-x-hidden overflow-clip transition-all group leading-none'>
       <Image src={launch.links.flickr.original[0]} className='object-cover h-full w-full group-hover:md:scale-110 transition-all' />
       <div className="visible md:invisible h-full bg-gradient-to-b md:bg-gradient-to-l from-transparent to-gray-900 w-full absolute z-10 bg-opacity-50" />
       <div className="invisible group-hover:md:visible h-full bg-gradient-to-b md:bg-gradient-to-l from-transparent to-gray-900 w-full absolute z-10 bg-opacity-50" />

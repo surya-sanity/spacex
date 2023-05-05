@@ -11,7 +11,7 @@ const RocketsPage = () => {
   }
 
   return (
-    <div className='self-center w-full lg:px-[5%] px-10'>
+    <div className='self-center w-full px-5 lg:px-[5%] '>
       <div className="w-full md:pl-5 flex flex-col gap-y-10 py-5">
         <SearchBar className="self-center w-full md:w-1/3" placeHolder="Search by rocket's name" searchFunction={searchByRocketName} />
         <RocketsContent rockets={rocketsData} searchQuery={searchQuery} />

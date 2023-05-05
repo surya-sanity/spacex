@@ -10,7 +10,7 @@ interface RocketsPropType {
 const RocketsContent = (props: RocketsPropType) => {
   const { rockets, searchQuery } = props;
 
-  if (!rockets.length) {
+  if (!rockets.length && searchQuery) {
     return (<EmptyState isFullPage={true} className="h-[50vh]" forQuery={searchQuery} />)
   }
 

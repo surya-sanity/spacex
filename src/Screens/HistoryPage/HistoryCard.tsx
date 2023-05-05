@@ -15,7 +15,7 @@ const HistoryCard = (props: HistoryCardPropType) => {
   };
 
   return (
-    <div className="rounded-lg overflow-clip hover:shadow-md dark:hover:bg-darkOverlay hover:scale-110 transition-all group">
+    <div className="rounded-lg overflow-clip hover:shadow-md md:dark:hover:bg-darkOverlay md:hover:scale-110 transition-all group">
       <div className="flex flex-1 h-full w-full flex-row gap-x-1">
         <div className="p-3">
           <div className="p-2 rounded-full mb-auto">

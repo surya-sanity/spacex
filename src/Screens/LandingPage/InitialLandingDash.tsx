@@ -21,7 +21,7 @@ const InitialLandingDash = (props: InitialLandingDashPropType) => {
   const handleViewClick = () => triggerScroll()
 
   return (
-    <div className='h-[92vh] w-full flex flex-1 items-center justify-start lg:justify-center  relative overflow-x-hidden overflow-clip'>
+    <div className='h-[95vh] w-full flex flex-1 items-center justify-start lg:justify-center  relative overflow-x-hidden overflow-clip '>
       <SpaceBG className='absolute w-full h-full z-10  select-none' />
       <LandingCut className='absolute -bottom-[5rem] right-0 -z-0 opacity-30 animate-bump-out-in-right select-none' />
       <Image src={Moon} alt="Moon" className='animate-bump-out-in-left absolute top-0 lg:top-[5vh] -left-[15vw] select-none z-20' loading='eager' height={imageByWidth(0.35)} width={imageByWidth(0.35)} />

@@ -10,7 +10,7 @@ interface LaunchContentPropType {
 const LaunchContent = (props: LaunchContentPropType) => {
   const { launches, searchQuery } = props;
 
-  if (!launches.length) {
+  if (!launches.length && searchQuery) {
     return (<EmptyState isFullPage={true} className="h-[50vh]" forQuery={searchQuery} />)
   }
 
