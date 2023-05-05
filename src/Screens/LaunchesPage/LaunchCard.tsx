@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import Button from "../../Components/Button";
 import Image from "../../Components/Image";
 import { Launch } from "../../Models/Launch"
@@ -24,10 +25,11 @@ const LaunchCard = (props: LaunchCardPropType) => {
       </div>
       <div className="text-sm">{new Date(launch.date_local).toLocaleDateString()} {new Date(launch.date_local).toLocaleTimeString()}</div>
       <div className="text-4xl font-bold uppercase truncate">{launch.name}</div>
-      <Button
-        onClick={() => { }}>
-        Learn more
-      </Button>
+      <NavLink to={`/launches/${launch.id}`}>
+        <Button>
+          Learn more
+        </Button>
+      </NavLink>
     </div>
   )
 }

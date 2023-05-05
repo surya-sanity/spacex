@@ -7,19 +7,19 @@ interface NavBarMenuItemPropType {
 
 const NavBarMenuItem = (props: NavBarMenuItemPropType) => {
   const { menuItem } = props;
-  const { pathname } = useLocation()
+  const location = useLocation()
 
   const menuItemStyle = {
     navLink: "text-gray-400",
     active: "underline underline-offset-[0.5rem] text-black font-semibold dark:text-white",
   }
 
-  const isActive = pathname === menuItem.route
+  const isActive = location.pathname.endsWith(menuItem.route)
 
   return (
     <NavLink
       to={menuItem.route}
-      className={({ isActive }) => `${isActive ? menuItemStyle.active : menuItemStyle.navLink} group transition duration-300`}>
+      className={`${isActive ? menuItemStyle.active : menuItemStyle.navLink} group transition duration-300`}>
       {menuItem.name}
 
       {/* show the hover underline animation only if the item is not active */}

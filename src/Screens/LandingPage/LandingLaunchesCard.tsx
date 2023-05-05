@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import Button from "../../Components/Button";
 import Image from "../../Components/Image";
 import { Launch } from "../../Models/Launch"
@@ -19,7 +20,9 @@ const LandingLaunchesCard = (props: LandingLaunchesCardPropType) => {
         <div className="text-3xl md:text-7xl font-extrabold uppercase transition-transform">
           {launch.name}
         </div>
-        <Button onClick={() => { }} theme="dark" >Rewatch</Button>
+        <NavLink to={`/launches/${launch.id}`}>
+          <Button theme="dark" >Rewatch</Button>
+        </NavLink>
       </div>
     </div>
   )
