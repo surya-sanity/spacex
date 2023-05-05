@@ -1,6 +1,6 @@
 import HistoryPage from "../../Screens/HistoryPage/HistoryPage";
 import LaunchesPage from "../../Screens/LaunchesPage/LaunchesPage";
-import RocketsPage from "../../Screens/RocketsPage";
+import RocketsPage from "../../Screens/RocketsPage/RocketsPage";
 import NavBarMenuItem from "./NavBarMenuItem";
 
 export interface MenuItemType {
@@ -21,15 +21,16 @@ const menuItemsInitialData: MenuItemType[] = [
     component: LaunchesPage,
   },
   {
-    name: "Rockets",
-    route: "/rockets",
-    component: RocketsPage,
-  },
-  {
     name: "History",
     route: "/history",
     component: HistoryPage,
   },
+  {
+    name: "Rockets",
+    route: "/rockets",
+    component: RocketsPage,
+  },
+
 ];
 
 const NavBarMenu = (props: NavBarMenuPropsType) => {

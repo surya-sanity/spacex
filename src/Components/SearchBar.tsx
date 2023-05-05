@@ -20,7 +20,9 @@ const SearchBar = (props: SearchBarPropType) => {
 
   useEffect(() => {
     searchFunction(debouncedValue)
-  }, [debouncedValue, searchFunction])
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [debouncedValue])
 
   return (
     <div className={`relative ${className}`}>

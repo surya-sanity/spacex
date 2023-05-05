@@ -13,7 +13,7 @@ const LaunchesPage = () => {
   return (
     <div className='self-center w-full lg:px-[5%] px-10'>
       <div className="w-full md:pl-5 flex flex-col gap-y-10 py-5">
-        <SearchBar className="self-center w-full md:w-1/3" placeHolder="Search by name" searchFunction={searchByLaunchName} />
+        <SearchBar className="self-center w-full md:w-1/3" placeHolder="Search by launch title" searchFunction={searchByLaunchName} />
         <LaunchContent launches={launchesData} />
       </div>
     </div>

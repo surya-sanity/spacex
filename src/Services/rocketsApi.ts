@@ -7,15 +7,15 @@ export const rocketsApi = createApi({
   tagTypes: ['Rocket'],
   baseQuery: baseQuery,
   endpoints: (builder) => ({
-    getRocket: builder.query<Rocket[], void>({
+    getRockets: builder.query<Rocket[], void>({
       query: () => "rockets",
       providesTags: ["Rocket"],
     }),
-    getRocketById: builder.query<Rocket, any>({
+    getRocketById: builder.query<Rocket, string>({
       query: (id: string) => `rockets/${id}`,
       providesTags: ["Rocket"],
     }),
   }),
 })
 
-export const { useGetRocketQuery, useGetRocketByIdQuery } = rocketsApi;
+export const { useGetRocketsQuery, useGetRocketByIdQuery } = rocketsApi;
