@@ -16,6 +16,7 @@ const Logo = (props: LogoProps) => {
 
   return (
     <SpaceXLogo
+      name="SpaceX"
       onClick={handleLogoClick}
       className={`${className} ${onClick ? "cursor-pointer" : ""}`}
     />
