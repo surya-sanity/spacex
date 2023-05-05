@@ -17,4 +17,4 @@ npm start
 npm build
 ```
 
-Hosted at https://spacex-strat-forge.vercel.app/
+Hosted at https://spacex-surya.vercel.app/
