@@ -23,7 +23,7 @@ const LaunchCard = (props: LaunchCardPropType) => {
         />
       </div>
       <div className="text-sm">{new Date(launch.date_local).toLocaleDateString()} {new Date(launch.date_local).toLocaleTimeString()}</div>
-      <div className="text-4xl font-bold uppercase">{launch.name}</div>
+      <div className="text-4xl font-bold uppercase truncate">{launch.name}</div>
       <Button
         onClick={() => { }}>
         Learn more
