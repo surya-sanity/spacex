@@ -10,7 +10,7 @@ interface LaunchCardPropType {
 const LaunchCard = (props: LaunchCardPropType) => {
   const { launch } = props;
 
-  //todo remove finally
+  //not showing launches without images for better presentation 
   if (!launch.links.flickr.original[0]) {
     return null
   }

@@ -19,7 +19,7 @@ module.exports = {
         },
         fadeIn: {
           '0%': { opacity: 0.1 },
-          '100%': { opacity: 0.3 },
+          '100%': { opacity: 1 },
         },
         bumpOutAndSlideInRight: {
           '0%': { scale: '2', transform: 'translateX(30rem)' },
