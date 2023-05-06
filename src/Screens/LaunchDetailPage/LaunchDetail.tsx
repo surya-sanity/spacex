@@ -26,8 +26,8 @@ const LaunchDetail = () => {
       <div className="w-full md:pl-5 flex flex-col gap-y-10 py-5 pb-20">
         <YoutubePlayer videoId={launchData.links.youtube_id} className="w-full md:h-[50vh] self-center rounded-xl select-none border-none" />
         <div className="flex flex-col gap-y-4">
-          <div className="text-md uppercase">{new Date(launchData.date_utc).toLocaleDateString()}</div>
-          <div className="text-3xl uppercase font-semibold">{launchData.name}</div>
+          <div className="text-sm font-semibold uppercase">{new Date(launchData.date_utc).toLocaleDateString()}</div>
+          <div className="text-5xl uppercase font-semibold">{launchData.name}</div>
           <div className="text-md">{launchData.details}</div>
         </div>
         {launchData.links.flickr.original.length &&
